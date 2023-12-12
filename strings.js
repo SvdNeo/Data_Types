@@ -21,6 +21,8 @@ function ucFirst(str){
 }
 console.log(ucFirst("vinay"))
 
+//Check for spam
+
 function checkSpam(str){
     let lowerStr = str.toLowerCase()
     if(lowerStr.includes("viagra")|| lowerStr.includes("xxx") ){
@@ -31,3 +33,18 @@ function checkSpam(str){
     }
 }
 console.log(checkSpam('buy ViAgRA now'));
+
+function truncate(str,maxLength){
+    if(str.length>maxLength){
+        return str.slice(0,maxLength-1)+"..."
+    }
+    else{
+        return str
+    }
+}
+console.log(truncate("What I'd like to tell on this topic is:", 20))
+
+function extractCurrencyValue(str){
+    return +str.slice(1)
+}
+console.log(extractCurrencyValue('$120') === 120 )
