@@ -20,3 +20,14 @@ function ucFirst(str){
     return str[0].toUpperCase()+str.substring(1,str.length)
 }
 console.log(ucFirst("vinay"))
+
+function checkSpam(str){
+    let lowerStr = str.toLowerCase()
+    if(lowerStr.includes("viagra")|| lowerStr.includes("xxx") ){
+        return true
+    }
+    else{
+        false
+    }
+}
+console.log(checkSpam('buy ViAgRA now'));
