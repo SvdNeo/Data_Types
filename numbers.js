@@ -61,3 +61,10 @@ function readNumber1() {
       alert("Invalid input. Please enter a valid number.");
     }
   }
+
+  //Write the function random(min, max) to generate a random floating-point number from min to max (not including max).
+  function random(min,max){
+let h = Math.random*(max-min)+min
+return h
+  }
+  random(1,5)
