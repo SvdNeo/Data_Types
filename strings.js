@@ -10,5 +10,13 @@ console.log(str1.indexOf("Widget"))
 console.log(str1.indexOf("id",1))
 
 let str2 = "Competition";
-console.log(str2.slice(2,5));
+console.log(str2.slice(5,-2));
 console.log(str2.slice(-5,-1));
+console.log(str2.substring(3,-4));
+console.log(str2.substr(4,3))
+
+//Uppercase the first character
+function ucFirst(str){
+    return str[0].toUpperCase()+str.substring(1,str.length)
+}
+console.log(ucFirst("vinay"))
