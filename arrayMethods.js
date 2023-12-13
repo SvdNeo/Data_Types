@@ -10,5 +10,22 @@ let arr = [5, 3, 8, 1];
 
 function filterRange(arr, a, b){
     return arr.filter(i=>(i>=a && i<=b))
+
 }
-console.log(filterRange(arr,1,4))
+//console.log(filterRange(arr,1,4))
+
+
+// filter in place
+function filterRangeInPlace(arr, a, b) {
+for(let i=0;i<arr.length;i++){
+    if(arr[i]<a || arr[i]>b){
+        arr.splice(i,1)
+        i--
+    }
+}
+}
+filterRangeInPlace(arr, 1, 4);
+console.log(arr)
+
+let arr2 = [5, 2, 1, -10, 8];
+console.log(arr2.sort((a,b)=>{return b-a}))
