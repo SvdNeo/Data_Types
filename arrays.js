@@ -116,4 +116,11 @@ return globalMax;
 console.log(getMaxSubSum([1, -2, 3, 4, -9, 6]));
 
 
-// 
+// splice and slice 
+let array = [1,2,3,4,5,6]
+let array2 = array.splice(1,2,7,8);
+console.log(array)//  in splice original array is changed to [ 1, 7, 8, 4, 5, 6 ] whereas spliced array consist of deleted elements
+console.log(array2)
+let array3 = array.slice(2,4)
+console.log(array)
+console.log(array3)// in slice original array remains unchanged where as sliced array consist of sliced elements
