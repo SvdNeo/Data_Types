@@ -20,3 +20,39 @@ fruits2[2] = {}; // Create an object at index 0
 fruits2[2].age = 25;
 fruits2[0] = "apple"
 console.log(fruits2);
+
+//arrays are pass by reference  as they are objects(non primitive)
+
+let arr2  = ["one"];
+let arr3 = arr2;
+console.log(arr3);
+arr3[1] = "Two";
+console.log(arr2);
+
+//traversing through loops
+let fruits3 = ["Apple", "Orange", "Plum",{1:"grapes"}];
+
+// iterates over array elements
+for (let fruit of fruits3) {
+    let y = fruit
+  console.log( y);
+}
+
+// multidimensional arrays
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  console.log(matrix[0][2])
+
+  //task 1
+  let fruits = ["Apples", "Pear", "Orange"];
+
+// push a new value into the "copy"
+let shoppingCart = fruits;
+shoppingCart.push("Banana");
+
+// what's in fruits?
+alert( fruits.length ); // 4
+
