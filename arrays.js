@@ -12,3 +12,11 @@ console.log(arr[2][0]);
 console.log(arr[3]);
 console.log(typeof arr[5]);
 arr[6]()
+
+// arrays are objects but in a more organized manner
+let fruits2 = [];
+fruits2[99999] = 5;
+fruits2[2] = {}; // Create an object at index 0
+fruits2[2].age = 25;
+fruits2[0] = "apple"
+console.log(fruits2);
