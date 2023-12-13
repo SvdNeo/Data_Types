@@ -124,3 +124,28 @@ console.log(array2)
 let array3 = array.slice(2,4)
 console.log(array)
 console.log(array3)// in slice original array remains unchanged where as sliced array consist of sliced elements
+
+//concat
+let arr5 = [8,9,"fun",()=>{}];
+let obj = {
+    name:"svd",
+    company:"NEOITO"
+}
+const content = arr5.concat(obj)
+console.log(content);
+
+let arr6 = [1, 2];
+
+let arrayLike = {
+  0: "something",
+  1: "else",
+  [Symbol.isConcatSpreadable]: true,
+  length: 2
+};
+
+console.log( arr6.concat(arrayLike) )//  if object has a special Symbol.isConcatSpreadable property, then it’s treated as an array by concat: its elements are added instead:
+
+let Universe = ["Spidey","Iron-Man","Hulk"];
+Universe.forEach((item,index,array)=>{
+console.log(`The Avenger ${item} at index ${index} belongs to ${array}`)
+})
