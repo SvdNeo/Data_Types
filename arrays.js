@@ -47,12 +47,22 @@ let matrix = [
   console.log(matrix[0][2])
 
   //task 1
-  let fruits = ["Apples", "Pear", "Orange"];
+  let fruits4 = ["Apples", "Pear", "Orange"];
 
 // push a new value into the "copy"
-let shoppingCart = fruits;
+let shoppingCart = fruits4;
 shoppingCart.push("Banana");
 
 // what's in fruits?
-alert( fruits.length ); // 4
+//alert( fruits4.length ); // 4
 
+// task 2
+let styles = ["jazz","blues"];
+styles.push ("Rock-n-Roll");
+console.log(styles)
+styles[Math.floor(styles.length-1)/2] = "Classics";
+console.log(styles)
+styles.shift()
+console.log(styles)
+styles.unshift("Rap", "Reggae");
+console.log(styles)
