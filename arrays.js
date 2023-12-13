@@ -69,10 +69,51 @@ console.log(styles)
 
 //task 3
 
-let arr4 = ["a", "b"];
+// let arr4 = ["a", "b"];
 
-arr4.push(function() {
-  alert( this );
-})
+// arr4.push(function() {
+//   alert( this );
+// })
 
-arr4[2](); // here this line invokes the function which is being pushed into the arr4 therefore "this" keyword will refer to the arr4 hence the output will be [ "a", "b", function() { alert( this ); } ]
+// arr4[2](); // here this line invokes the function which is being pushed into the arr4 therefore "this" keyword will refer to the arr4 hence the output will be [ "a", "b", function() { alert( this ); } ]
+
+// function sumInput(){
+//     let num = [];
+//     while(true){
+//         let input = prompt("Enter a number")
+//         if(input === null){
+//             break;
+//         }
+//         let number = parseFloat(input)
+//         if(!isNaN(number)){
+//             num.push(number)
+//         }
+//     }
+//     return num.reduce((a,b)=>{return a+b},0)
+
+// }
+
+// let res = sumInput();
+// alert(res)
+
+//Kadane algorithm
+function getMaxSubSum(arr) {
+let currentMax = 0;
+let globalMax = Number.MIN_VALUE;
+for(let i=0;i<arr.length;i++){
+    currentMax = currentMax+arr[i]
+    if(currentMax<arr[i]){
+        currentMax=arr[i]
+    }
+    if(globalMax<currentMax){
+        globalMax=currentMax
+    }
+    
+}
+
+return globalMax;
+}
+console.log(getMaxSubSum([1, -2, 3, 4, -9, 6]));
+
+
+// 
