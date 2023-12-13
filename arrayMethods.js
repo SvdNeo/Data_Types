@@ -29,3 +29,11 @@ console.log(arr)
 
 let arr2 = [5, 2, 1, -10, 8];
 console.log(arr2.sort((a,b)=>{return b-a}))
+
+let arr3 = ["HTML", "JavaScript", "CSS"];
+function copySorted(){
+    return arr3.slice().sort()
+}
+let sorted = copySorted();
+console.log(sorted);
+console.log(arr3)
