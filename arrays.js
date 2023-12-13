@@ -66,3 +66,13 @@ styles.shift()
 console.log(styles)
 styles.unshift("Rap", "Reggae");
 console.log(styles)
+
+//task 3
+
+let arr4 = ["a", "b"];
+
+arr4.push(function() {
+  alert( this );
+})
+
+arr4[2](); // here this line invokes the function which is being pushed into the arr4 therefore "this" keyword will refer to the arr4 hence the output will be [ "a", "b", function() { alert( this ); } ]
