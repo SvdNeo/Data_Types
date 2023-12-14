@@ -77,3 +77,20 @@ calc.addMethod('/', (a, b) => a / b);
 
 console.log(calc.calculate("4 * 5")); // Output: 20
 console.log(calc.calculate("10 / 2")); // Output: 5
+
+
+// accessing the name of users
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [john, pete, mary];
+
+// Using map to create an array of names
+//let names = users.map(user => user.name);
+let names = [];
+for(let i = 0;i<users.length;i++){names.push(users[i].name)}
+
+
+
+console.log(names);
