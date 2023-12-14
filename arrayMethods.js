@@ -143,4 +143,24 @@ function averageAge(){
     let avg = house.reduce((a,b)=>{return (a+b.age/house.length)},0)
     return avg
 }
-console.log(averageAge(house))
+console.log(averageAge(house));
+
+//array with unique elements
+
+function uniqueArray(arr){
+    return arr.filter((item,index)=> arr.indexOf(item)===index)
+}
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+console.log( uniqueArray(strings) );
+
+//keyed objects
+let user = [
+    {id: 'john', name: "John Smith", age: 20},
+    {id: 'ann', name: "Ann Smith", age: 24},
+    {id: 'pete', name: "Pete Peterson", age: 31},
+  ];
+  let userId = user.map(i=>({  [i.id]:i}))
+  console.log(userId)
