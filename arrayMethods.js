@@ -132,3 +132,15 @@ function shuffleArray(arr8){
 let arr8 = [1,2,3]
 console.log(shuffleArray(arr8));
 console.log(arr8)
+
+// getting average
+let sam = { name: "Sam", age: 25 };
+let erold = { name: "Erold", age: 30 };
+let durin = { name: "Durin", age: 29 };
+
+let house = [ sam, erold, durin ];
+function averageAge(){
+    let avg = house.reduce((a,b)=>{return (a+b.age/house.length)},0)
+    return avg
+}
+console.log(averageAge(house))
