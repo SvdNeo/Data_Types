@@ -87,10 +87,36 @@ let mary = { name: "Mary", age: 28 };
 let users = [john, pete, mary];
 
 // Using map to create an array of names
-//let names = users.map(user => user.name);
+let names1 = users.map(user => user.name);// using map method
 let names = [];
-for(let i = 0;i<users.length;i++){names.push(users[i].name)}
+for(let i = 0;i<users.length;i++){names.push(users[i].name)}// using for loop
 
 
-
+console.log(names1)
 console.log(names);
+
+// mapping to objects
+let johnny = { name: "Johnny", surname: "Smith", id: 1 };
+let peter = { name: "Peter", surname: "Hunt", id: 2 };
+let march = { name: "March", surname: "Key", id: 3 };
+
+let users1 = [ johnny, peter, march ];
+
+let usersMapped = users1.map(i=>({
+    fullName: `${i.name} ${i.surname}`,
+    id: i.id
+}))
+console.log(usersMapped)
+
+let john1 = { name: "John", age: 25 };
+let peter1 = { name: "Pete", age: 30 };
+let mary1 = { name: "Mary", age: 28 };
+
+let users2 = [ peter1, john1, mary1 ];
+
+function sortByAge(users2){
+   users2.sort((a,b)=>a.age - b.age)
+   return users2
+
+}
+console.log(sortByAge(users2))
