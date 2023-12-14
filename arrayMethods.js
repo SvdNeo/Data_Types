@@ -120,3 +120,15 @@ function sortByAge(users2){
 
 }
 console.log(sortByAge(users2))
+
+//shuffled array
+function shuffleArray(arr8){
+
+    for(let i = arr8.length-1;i>0;i--){        
+         let j = Math.floor(Math.random()*(i+1));
+        [arr8[i],arr8[j]] = [arr8[j],arr8[i]];
+    }
+}
+let arr8 = [1,2,3]
+console.log(shuffleArray(arr8));
+console.log(arr8)
