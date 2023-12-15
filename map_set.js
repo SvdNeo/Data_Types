@@ -15,3 +15,18 @@ console.log(map);
 console.log(map.delete("1"));
 console.log(map);
 console.log(map.has(team));
+
+let recipeMap = new Map([
+    ['cucumber', 500],
+    ['tomatoes', 350],
+    ['onion',    50]
+  ]);
+  for(let key of recipeMap.keys()){
+    console.log(key)
+  }
+  for (let amount of recipeMap.values()) {
+    console.log(amount); // 500, 350, 50
+  }
+  for (let entry of recipeMap) { // the same as of recipeMap.entries()
+    console.log(entry); // cucumber,500 (and so on)
+  }
