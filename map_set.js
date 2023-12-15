@@ -30,3 +30,24 @@ let recipeMap = new Map([
   for (let entry of recipeMap) { // the same as of recipeMap.entries()
     console.log(entry); // cucumber,500 (and so on)
   }
+  recipeMap.forEach((value,key)=>{
+    console.log(`${key}:${value}`)
+  })
+
+  let obj = {
+    name: "John",
+    age: 30,
+    place:"Kerala"
+  };
+  let mappedObj = new Map(Object.entries(obj))
+  console.log(mappedObj.get('place'))
+
+
+  //tasks
+  let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+function unique(arr){
+    return Array.from(new Set(arr) )
+    }
+    console.log(unique(values))
