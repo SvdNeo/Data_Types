@@ -63,8 +63,8 @@ let recipeMap = new Map([
   age: 35,
  
 };
- let getName = function (state) {
-    console.log(`${this.user} from ${state} state`);
+ let getName = function (state,country) {
+    console.log(`${this.user} belongs to ${state} state of  ${country} `);
   }
 
 let object2 = {
@@ -74,7 +74,31 @@ let object2 = {
 
 // Using call to invoke the getName method of object1 with the this value set to object2
 getName.call(object2,"Karnataka");
+getName.apply(object1,["Karnataka","India"])
+const output = getName.bind(object2,"Karnataka","India");
+output()
 
+function sum(){
+  let total =0;
+  for(let i=0;i<arguments.length;i++){
+    total+=arguments[i]
+  }
+  console.log(total)
+}
+sum(1e6,8e6,9e6)
+
+const obj5 = {};
+
+Object.defineProperties(obj5, {
+  property1: {
+    value: 42,
+    writable: true
+  },
+  property2: {value:{null:"string"},writable: true}
+});
+
+console.log(obj5.property1); // Output: 42
+console.log(obj5.property2.null)
 
   //tasks
   let values = ["Hare", "Krishna", "Hare", "Krishna",
