@@ -37,10 +37,43 @@ let recipeMap = new Map([
   let obj = {
     name: "John",
     age: 30,
-    place:"Kerala"
+    place:"Kerala",
+    callName: function(){
+      console.log(this.name)
+    }
   };
   let mappedObj = new Map(Object.entries(obj))
   console.log(mappedObj.get('place'))
+
+  let mapped = new Map();
+  mapped.set(1,"udupi");
+  mapped.set(2,"Mantrlaya");
+  mapped.set(3,"Tirumala")
+
+  let obj3 = Object.fromEntries(mapped.entries())
+  console.log(obj3)
+ console.log(Object.keys(obj3))
+ console.log(Object.getOwnPropertyDescriptors(obj3))
+ console.log(Object.getOwnPropertyDescriptor(obj3))
+ console.log(Object.is(obj,obj3))
+ 
+
+ let object1 = {
+  user: "Sanjay",
+  age: 35,
+ 
+};
+ let getName = function (state) {
+    console.log(`${this.user} from ${state} state`);
+  }
+
+let object2 = {
+  user: "Vinay",
+  age: 35
+};
+
+// Using call to invoke the getName method of object1 with the this value set to object2
+getName.call(object2,"Karnataka");
 
 
   //tasks
