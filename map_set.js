@@ -77,6 +77,7 @@ getName.call(object2,"Karnataka");
 getName.apply(object1,["Karnataka","India"])
 const output = getName.bind(object2,"Karnataka","India");
 output()
+console.log(object1.toString())
 
 function sum(){
   let total =0;
