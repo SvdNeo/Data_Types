@@ -22,3 +22,10 @@ const first = new Map([
     return "function over"
      
 }
+let recipeMap = new Map([
+    ['cucumber', 500],
+    ['tomatoes', 350],
+    ['onion',    50]
+  ]);
+  console.log(Array.from(recipeMap.keys()))
+  console.log(Array.from(recipeMap.values()).filter(i=>i>50).reduce((acc,cur)=>acc+cur,0))// recipeMap.values() gives out map itterator which is not itterable hence by using Array.from we can convert it into itterable array where we can apply array methods

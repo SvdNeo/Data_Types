@@ -101,6 +101,7 @@ Object.defineProperties(obj5, {
 console.log(obj5.property1); // Output: 42
 console.log(obj5.property2.null)
 
+
   //tasks
   let values = ["Hare", "Krishna", "Hare", "Krishna",
   "Krishna", "Krishna", "Hare", "Hare", ":-O"
@@ -123,3 +124,5 @@ function anagrams(arr){
     return Array.from(map.values())
 }
 anagrams(arr);
+
+
