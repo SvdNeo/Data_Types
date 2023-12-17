@@ -109,3 +109,17 @@ function unique(arr){
     return Array.from(new Set(arr) )
     }
     console.log(unique(values))
+
+  //anagrams
+  let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+function anagrams(arr){
+    const map = new Map();
+    for(let i of arr){
+        let word = i.toLowerCase().split("").sort().join("");
+        console.log(word)
+        map.set(word,i)
+    }
+    console.log(map)
+    return Array.from(map.values())
+}
+anagrams(arr);
