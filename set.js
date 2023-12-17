@@ -29,3 +29,11 @@ function logg(val1,val2,set){
     console.log(`[${val1}]:${val2}`)
 }
 new Set(["foo","foo1","foo2"]).forEach(logg)
+
+const set4 = new Set();
+const obj1 = { key1: 1 };
+set4.add(obj1);
+
+console.log(set4.has(obj1)); // true
+console.log(set4.has({ key1: 1 })); // false, because they are different object references
+console.log(set4.add({ key1: 1 })); // now set1 contains 2 entries
