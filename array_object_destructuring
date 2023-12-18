@@ -41,3 +41,27 @@ console.log(b)
 
 let [one, two, three] = new Set([1, 2, 3]);
 console.log(one)
+
+const config = [true];
+
+// Assigning with a default value
+let [isEnabled, timeout = 1000] = config;
+
+console.log(isEnabled); // Output: true
+console.log(timeout);   // Output: 1000 (default value)
+
+
+//swapping
+let x1 = "sanjay";
+let x2 = "vinay";
+[x1,x2] = [x2,x1]
+console.log(x1)
+console.log(x2)
+
+
+let [named = "Guest",, surname = "Anonymous"] = ["Julius","Ceaser"];
+console.log(named)
+console.log(surname)
+
+let [names=prompt("name ?"),surnames = prompt("surname ?")] = ["Sanjay"]
+console.log(surnames)
