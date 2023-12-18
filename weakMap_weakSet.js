@@ -49,4 +49,15 @@ let messages = [
   console.log(messages)
   console.log(readMess)
 
+  let messages1 = [
+    {text: "Hello", from: "John"},
+    {text: "How goes?", from: "John"},
+    {text: "See you soon", from: "Alice"}
+  ];
+  
+  let readMap = new WeakMap();
+  
+  readMap.set(messages1[0], new Date(2017, 1, 1));
+  console.log(readMap)
+
 
