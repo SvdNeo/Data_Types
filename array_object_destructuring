@@ -63,5 +63,38 @@ let [named = "Guest",, surname = "Anonymous"] = ["Julius","Ceaser"];
 console.log(named)
 console.log(surname)
 
-let [names=prompt("name ?"),surnames = prompt("surname ?")] = ["Sanjay"]
-console.log(surnames)
+// let [names=prompt("name ?"),surnames = prompt("surname ?")] = ["Sanjay"]
+// console.log(surnames)
+
+let {height, width, title} = { title: "Menu", height: 200, width: 100 }
+console.log(height)
+console.log(title)
+
+
+//task 1 destructuring an object
+let user = {
+    namez: "John",
+    years: 30
+  };
+  let{namez,years:aged,isAdmin = false} = user
+  console.log(namez);
+  console.log(aged);
+  console.log(isAdmin);
+
+  let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+  };
+  function topSalary(salaries){
+let maxSalary = 0;
+let maxName = null
+for(const [nam,sal] of Object.entries(salaries)){
+if(sal>maxSalary){
+    maxSalary = sal;
+    maxName = nam;
+}
+}
+return maxName
+  }
+  console.log(topSalary(salaries))
