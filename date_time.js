@@ -13,3 +13,16 @@ let date1 = new Date(2016, 2, 28);
 //date1.setDate(date.getDate() + 2);
 date1.setSeconds(date1.getSeconds() + 70);
 console.log( date1 );
+
+// let start = new Date();
+// for(let i=0;i<100000;i++){
+//     let doS = i*i*i;
+// }
+// let end = new Date()
+// console.log(`it took ${end-start} ms`)
+let start = Date.now();
+for(let i=0;i<100000;i++){
+    let doS = i*i*i;
+}
+let end = Date.now()
+console.log(`it took ${end-start} ms`)
