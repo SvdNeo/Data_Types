@@ -26,3 +26,16 @@ for(let i=0;i<100000;i++){
 }
 let end = Date.now()
 console.log(`it took ${end-start} ms`)
+
+//task1
+
+const date2 = new Date(2012,1,20,3,12,0,0)
+
+
+//task2 Write a function getWeekDay(date) to show the weekday in short format: ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’.
+function getWeekDay(date3){
+    let days = ['MO', 'TU','WE' , 'TH', 'FR', 'SA', 'SU']
+    return days[date3.getDay()]
+}
+let date3 = new Date(2012,1,20,3,12,0,0)
+console.log(getWeekDay(date3))
