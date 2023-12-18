@@ -1,0 +1,43 @@
+// Basic array destructuring
+const numbers = [1, 2, 3];
+const [x,y,z] = numbers;
+
+console.log(x);  // Output: 1
+console.log(y); // Output: 2
+console.log(z);  // Output: 3
+
+// Skipping elements in array destructuring
+const colors = ['red', 'green', 'blue'];
+const [, ,n ] = colors;
+
+console.log(n); // Output: blue
+
+// Rest parameter in array destructuring
+const number = [1, 2, 3, 4, 5];
+const [first, second, ...rest] = number;
+
+console.log(first);  // Output: 1
+console.log(second); // Output: 2
+console.log(rest);   // Output: [3, 4, 5]
+
+// Basic object destructuring
+const person = { name: 'Alice', age: 30, city: 'Wonderland' };
+const { name, age, city } = person;
+
+console.log(name); // Output: Alice
+console.log(age);  // Output: 30
+console.log(city); // Output: Wonderland
+
+
+const student = {fName:"sanjay",lName:"Dambal",age:35}
+const{fName:first1,lName:last,age:year} = student
+console.log(first1)
+console.log(last);
+console.log(year)
+
+let [a, b, c] = "abc";
+console.log(a)
+console.log(b)
+
+let [one, two, three] = new Set([1, 2, 3]);
+console.log(one)
