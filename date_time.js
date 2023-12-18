@@ -39,3 +39,16 @@ function getWeekDay(date3){
 }
 let date3 = new Date(2012,1,20,3,12,0,0)
 console.log(getWeekDay(date3))
+
+//task 3 European weekday
+function getLocalDay(date4){
+    let day = date4.getDay();
+    if(day == 0){
+        day == 7
+    }
+    return day
+}
+let date4 = new Date(2012, 0, 3);  // 3 Jan 2012
+console.log( getLocalDay(date4) );    
+
+//task4 Which day of month was many days ago?
