@@ -61,3 +61,21 @@ let messages = [
   console.log(readMap)
 
 
+  let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+  };
+  let sal = {}
+
+function sumSalaries(salaries){
+    let sum = 0;
+    for(let val of Object.values(salaries)){
+        sum+=val
+    }
+    return sum
+}
+console.log(sumSalaries(salaries))
+console.log(sumSalaries(sal))
+
+
