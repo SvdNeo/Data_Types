@@ -52,3 +52,10 @@ let date4 = new Date(2012, 0, 3);  // 3 Jan 2012
 console.log( getLocalDay(date4) );    
 
 //task4 Which day of month was many days ago?
+function getDateAgo(date,days){
+    date.setDate(date.getDate()-days)
+    return date.getDate()
+}
+let date5 = new Date(2015, 0, 2);
+
+console.log( getDateAgo(date5, 2) );
