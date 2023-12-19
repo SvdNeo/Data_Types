@@ -82,3 +82,47 @@ function getSecondsUntilTomorrow(){
     return totalTime-today
 }
 console.log(getSecondsUntilTomorrow())
+
+//task 8 
+function formatDate(date) {
+    // Get the current date and time
+    const now = new Date();
+    
+    // Calculate the time difference in seconds
+    const secondsAgo = Math.floor((now - date) / 1000);
+  
+    // Case 1: If less than 1 second ago
+    if (secondsAgo < 1) {
+      return "right now";
+    } 
+    // Case 2: If less than 1 minute ago
+    else if (secondsAgo < 60) {
+      return `${secondsAgo} sec. ago`;
+    } 
+    // Case 3: If less than an hour ago
+    else if (secondsAgo < 3600) {
+      return `${Math.floor(secondsAgo / 60)} min. ago`;
+    } 
+    // Case 4: If an hour or more ago
+    else {
+      // Format the date using toLocaleDateString with options
+      const options = {
+        year: "2-digit",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+      };
+  
+      return date.toLocaleDateString("en", options);
+    }
+  }
+  
+  // Example usage:
+  const currentDate = new Date();
+const pastDate = new Date(2023, 11, 31, 10, 0); // December 31, 2023, 10:00 AM
+
+const timeDifferenceInSeconds = Math.floor((currentDate - pastDate) / 1000);
+console.log(formatDate(pastDate)); // Using the formatDate function from the previous examples
+
+  
