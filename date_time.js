@@ -59,3 +59,10 @@ function getDateAgo(date,days){
 let date5 = new Date(2015, 0, 2);
 
 console.log( getDateAgo(date5, 2) );
+
+// task5 Last day of month?
+function getLastDateOfMonth(year,month){
+    let dat = new Date(year,month+1,0)
+    return dat.getDate()
+}
+console.log(getLastDateOfMonth(2011, 13) );
