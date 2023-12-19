@@ -23,3 +23,17 @@ let student = {
 
   };
   console.log(JSON.stringify(meetup))
+  let room = {
+    number: 23
+  };
+  let meetup1 = {
+    title: "Conference",
+    participants: ["john", "ann"]
+  };
+  
+  meetup1.place = room;    
+  room.occupiedBy = meetup1;
+  console.log(room);
+  console.log(meetup1)
+  console.log(JSON.stringify(room));
+  console.log(JSON.stringify(meetup1))// it doesnt stringify asit has circled reference object
