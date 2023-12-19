@@ -23,17 +23,52 @@ let student = {
 
   };
   console.log(JSON.stringify(meetup))
-  let room = {
-    number: 23
+//   let room = {
+//     number: 23
+//   };
+//   let meetup1 = {
+//     title: "Conference",
+//     participants: ["john", "ann"]
+//   };
+  
+//   meetup1.place = room;    
+//   room.occupiedBy = meetup1;
+//   console.log(room);
+//   console.log(meetup1)
+//   console.log(JSON.stringify(room));
+//   console.log(JSON.stringify(meetup1))// it doesnt stringify asit has circled reference object
+
+let room = {
+    number: 23,
+    name:"san"
   };
   let meetup1 = {
     title: "Conference",
-    participants: ["john", "ann"]
+    participants: ["john", "ann"],
+    places:room
+  };
+  room.occupiedBy = meetup1
+ console.log(JSON.stringify(meetup1, ['title', 'participants']));
+ console.log(JSON.stringify(meetup1, ['title', 'participants','places','name',]));
+ console.log(JSON.stringify(meetup1, []));
+
+ let user = {
+    name: "John",
+    age: 25,
+    roles: {
+      isAdmin: false,
+      isEditor: true
+    }
   };
   
-  meetup1.place = room;    
-  room.occupiedBy = meetup1;
-  console.log(room);
-  console.log(meetup1)
-  console.log(JSON.stringify(room));
-  console.log(JSON.stringify(meetup1))// it doesnt stringify asit has circled reference object
+  console.log(JSON.stringify(user, null, 2));
+
+  //task 1
+  let user1 = {
+    name: "John Smith",
+    age: 35
+  };
+  const string = JSON.stringify(user1)
+  const parsed = JSON.parse(string)
+  console.log(string);
+  console.log(parsed)
