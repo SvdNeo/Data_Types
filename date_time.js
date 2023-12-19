@@ -66,3 +66,19 @@ function getLastDateOfMonth(year,month){
     return dat.getDate()
 }
 console.log(getLastDateOfMonth(2011, 13) );
+
+//task6 How many seconds have passed today?
+function getSecondsToday(){
+    let now = new Date();
+    return now.getHours()*3600+now.getMinutes()*60+now.getSeconds()
+}
+console.log(getSecondsToday())
+
+//task7 How many seconds till tomorrow?
+function getSecondsUntilTomorrow(){
+    let now = new Date();
+    const today = now.getHours()*3600+now.getMinutes()*60+now.getSeconds();
+    const totalTime = 24*60*60;
+    return totalTime-today
+}
+console.log(getSecondsUntilTomorrow())
